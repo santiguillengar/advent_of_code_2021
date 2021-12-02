@@ -4,12 +4,12 @@
 
 const utils = require('./utils');
 
-const INPUT_PART1_PATH = './input_day1_part1.txt';
-const INPUT_PART2_PATH = './input_day1_part2.txt';
+const INPUT_PART1_PATH = 'input_day1_part1.txt';
+const INPUT_PART2_PATH = 'input_day1_part2.txt';
 
 
 function part1() {
-  const input = utils.getInput(INPUT_PART1_PATH);
+  const input = utils.readLines(INPUT_PART1_PATH).map(Number);
   let count = 0;
 
   for (let i = 1; i < input.length; i++) {
@@ -20,7 +20,7 @@ function part1() {
 }
 
 function part2() {
-  const input = utils.getInput(INPUT_PART2_PATH);
+  const input = utils.readLines(INPUT_PART2_PATH).map(Number);
   let count = 0;
 
   for (let i=1; i < input.length - 2; i++) {
